@@ -44,7 +44,7 @@ az containerapp up \
     --source .
 ```
 
-<img width="780" height="374" alt="Picture3" src="https://github.com/user-attachments/assets/6c6ec466-35d8-49ce-9563-baf8e41ed4b7" />
+
 
 
 ## Connect to remote MCP server in VS Code using Github Copilot
