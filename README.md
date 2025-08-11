@@ -38,6 +38,7 @@ az containerapp up \
 ```
 
 ## Connect to remote MCP server in VS Code using Github Copilot
+GitHub Copilot, in conjunction with the Model Context Protocol (MCP), can be utilized for testing an MCP server. This involves configuring Copilot Chat to interact with the local MCP server running the application under test.
 For Github Copilot, modify the mcp.json on .vscode as below for example.
 
 ```json
@@ -54,6 +55,18 @@ For Github Copilot, modify the mcp.json on .vscode as below for example.
 }
 
 ```
+
+## Steps for using Github Copilot for MCP Server testing
+Run the MCP server locally: Start the application that is acting as the MCP server in a local environment such as in VS Code.<br>
+**Access Copilot Chat:** Open Copilot Chat within your IDE (e.g., Visual Studio Code).<br>
+**Enable Agent Mode:** Select "Agent mode" within the Copilot Chat prompt box.<br>
+**Add the MCP Server Tool:**
+<br>
+1-Click the "Tools" button in Copilot Chat.<br>
+2-Select "Add More Tools...".<br>
+3-Choose "Add MCP Server".<br>
+4-Specify the server type (e.g., HTTP or Server-Sent Events) and provide the relevant server details (e.g., URL).
+
 
 
 
