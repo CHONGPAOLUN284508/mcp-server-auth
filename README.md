@@ -71,3 +71,4 @@ Run the MCP server locally: Start the application that is acting as the MCP serv
 
 
     
+<img width="332" height="864" alt="github copilot 1" src="https://github.com/user-attachments/assets/43a97b0d-e0d7-4b08-a077-08b248948607" />
