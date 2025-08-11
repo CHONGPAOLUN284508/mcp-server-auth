@@ -25,6 +25,13 @@ Open a browser and navigate to http://127.0.0.1:6274
 
 In the URL enter: http://localhost:8001/mcp and click Connect. 
 
+<img width="624" height="375" alt="Picture2" src="https://github.com/user-attachments/assets/9f6a30e7-a10a-460c-8b43-bb0c42554b0a" />
+
+
+<img width="624" height="222" alt="Picture4" src="https://github.com/user-attachments/assets/fd97a769-5fdf-4427-add3-51f92ab43842" />
+
+
+
 
 ## Deploy to Azure Container Apps
 Run the following commands
@@ -36,6 +43,9 @@ az containerapp up \
  	--location <REGION> \
     --source .
 ```
+
+<img width="780" height="374" alt="Picture3" src="https://github.com/user-attachments/assets/6c6ec466-35d8-49ce-9563-baf8e41ed4b7" />
+
 
 ## Connect to remote MCP server in VS Code using Github Copilot
 GitHub Copilot, in conjunction with the Model Context Protocol (MCP), can be utilized for testing an MCP server. This involves configuring Copilot Chat to interact with the local MCP server running the application under test.
