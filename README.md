@@ -33,6 +33,24 @@ az containerapp up \
     --resource-group <RESOURCE_GROUP_NAME> \
     --name streamable-mcp-server \
     --environment mcp \
+
+## Connect to remote MCP server in VS Code using Github Copilot
+For Github Copilot, modify the mcp.json on .vscode as below for example.
+
+```json
+{
+	"servers": {
+		"my-mcp-server-8f6eaae9": {
+			"url": "http://localhost:8001/mcp",
+			"type": "http"
+		},
+	
+		
+	},
+	"inputs": []
+}
+
+```
     --location <REGION> \
     --source .
 ```
