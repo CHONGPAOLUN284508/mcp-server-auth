@@ -1,0 +1,14 @@
+{
+	"servers": {
+		"my-mcp-server-8f6eaae9": {
+			"url": "http://localhost:8001/mcp",
+			"type": "http"
+		},
+	
+		"streamable-mcp-server": {
+			"url": "https://streamable-mcpserver.niceocean-9b74be01.eastus.azurecontainerapps.io/mcp/",
+			"type": "http"
+		}
+	},
+	"inputs": []
+}

@@ -1,0 +1,4 @@
+yfinance
+httpx
+mcp
+fastmcp
