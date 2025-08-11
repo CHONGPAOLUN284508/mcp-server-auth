@@ -5,10 +5,7 @@
 			"type": "http"
 		},
 	
-		"streamable-mcp-server": {
-			"url": "https://streamable-mcpserver.niceocean-9b74be01.eastus.azurecontainerapps.io/mcp/",
-			"type": "http"
-		}
+		
 	},
 	"inputs": []
 }
