@@ -1,6 +1,12 @@
 # Streamable HTTP MCP Server
 
-## Running the MCP Server locally 
+This is a quick sample for developing MCP server for mini PoC or demo purposes. It is not desinged for production systems. You can clone it into your local desktop for running, debungging, or enhancing. you can also deploy the mcp server application to Azure container instance for remote consumption into mcp clients. 
+
+## Clone the repository
+
+git clone https://github.com/mafzal786/mcp-server.git
+
+## In Visual Studio Code - Run the MCP Server locally 
 Run the following commands
 ```
 cd mcp-server 
