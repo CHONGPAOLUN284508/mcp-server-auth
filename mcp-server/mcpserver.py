@@ -5,10 +5,14 @@ from datetime import datetime
 import json
 
 
-from mcp.server.fastmcp import FastMCP
+#from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
+
+
 
 # Initialize FastMCP server
 mcp = FastMCP("mcpserver", port=8001, host="0.0.0.0", stateless_http=True)
+
 
 # Constants
 NWS_API_BASE = "https://api.weather.gov"
