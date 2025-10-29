@@ -9,12 +9,11 @@ COPY mcp-server/ ./mcp-server/
 
 # Upgrade pip and install all required Python dependencies
 RUN python -m pip install --no-cache-dir --upgrade pip setuptools wheel \
-    && pip install --no-cache-dir \
+    && python -m pip install --no-cache-dir \
        uv \
        fastmcp \
        httpx \
        yfinance \
-       # optional extras you might need in future:
        python-dotenv \
        requests
 
