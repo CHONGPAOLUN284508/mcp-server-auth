@@ -1,18 +1,22 @@
+# Use official Python image
 FROM python:3.13-slim
 
-# Upgrade pip and install uv + dependencies
-RUN python -m pip install --no-cache-dir --upgrade pip setuptools wheel \
-    && pip install --no-cache-dir uv fastmcp httpx yfinance
-
-# Copy your application into the container
+# Set working directory
 WORKDIR /app
-COPY . /app
 
-# Optional: sync dependencies
-RUN uv sync --frozen --no-cache || true
+# Copy only the mcp-server folder into the container
+COPY mcp-server/ ./mcp-server/
 
-# Expose the port your app listens on
+# Install dependencies (if you have a requirements.txt)
+# Uncomment if you have one
+# COPY requirements.txt .
+# RUN pip install --no-cache-dir -r requirements.txt
+
+# Set working directory to where the script is
+WORKDIR /app/mcp-server
+
+# Expose the port your app will listen on
 EXPOSE 8001
 
-# Start the server
-CMD ["python", "-m", "uv", "run", "/app/mcpserver.py"]
+# Run the Python script
+CMD ["python", "mcpserver.py"]
