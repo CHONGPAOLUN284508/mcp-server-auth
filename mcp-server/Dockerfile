@@ -1,16 +1,18 @@
 FROM python:3.13-slim
 
-# Install uv.
-COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+# Upgrade pip and install uv + dependencies
+RUN python -m pip install --no-cache-dir --upgrade pip setuptools wheel \
+    && pip install --no-cache-dir uv fastmcp httpx yfinance
 
-# Copy the application into the container.
+# Copy your application into the container
+WORKDIR /app
 COPY . /app
 
-# Install the application dependencies.
-WORKDIR /app
-RUN uv sync --frozen --no-cache
+# Optional: sync dependencies
+RUN uv sync --frozen --no-cache || true
 
-# Run the application.
-CMD ["uv", "run", "/app/mcpserver.py"]
-
+# Expose the port your app listens on
 EXPOSE 8001
+
+# Start the server
+CMD ["python", "-m", "uv", "run", "/app/mcpserver.py"]
