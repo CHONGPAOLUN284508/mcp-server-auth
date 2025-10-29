@@ -7,7 +7,7 @@ WORKDIR /app
 # Copy everything from current folder into the container
 COPY . .
 
-# Upgrade pip and install all required Python dependencies
+# Upgrade pip and install dependencies
 RUN python -m pip install --no-cache-dir --upgrade pip setuptools wheel \
     && python -m pip install --no-cache-dir \
        uv \
@@ -17,10 +17,10 @@ RUN python -m pip install --no-cache-dir --upgrade pip setuptools wheel \
        python-dotenv \
        requests
 
-# Set working directory to the script folder
+# Set working directory to where the main script is
 WORKDIR /app
 
-# Expose the port your app listens on
+# Expose port
 EXPOSE 8001
 
 # Run the Python script
